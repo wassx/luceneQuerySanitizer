@@ -4,6 +4,8 @@ import org.apache.commons.lang.StringEscapeUtils;
 /**
  * Created by stefanwasserbauer (https://github.com/wassx) on 01.10.16.
  * Based on http://lucene.apache.org/core/2_9_4/queryparsersyntax.html#Escaping%20Special%20Characters
+ *
+ * Please re-test to verify security.
  */
 public class LuceneQuerySanitizer {
 
