@@ -1,5 +1,6 @@
-import java.util.regex.Pattern;
 import org.apache.commons.lang.StringEscapeUtils;
+
+import java.util.regex.Pattern;
 
 /**
  * Created by stefanwasserbauer (https://github.com/wassx) on 01.10.16.
@@ -9,7 +10,7 @@ import org.apache.commons.lang.StringEscapeUtils;
  */
 public class LuceneQuerySanitizer {
 
-	private final static Pattern SPECIAL_REGEX_CHARS = Pattern.compile("[{}()\\[\\]+&|-~*?!:^$]");
+	private final static Pattern SPECIAL_REGEX_CHARS = Pattern.compile("[\\{\\}\\(\\)\\[\\]\\+\\&\\|\\-\\~\\*\\?\\!\\:\\^\\$]");
 
 	public static String sanitize(String query) {
 		String escaped = StringEscapeUtils.escapeJavaScript(query);
